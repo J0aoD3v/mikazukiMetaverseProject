@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* Definição das cores em variáveis */
+:root {
+  --background-light: #ecf4ff; /* Cor de fundo clara */
+  --text-dark: #1c1c1c; /* Texto escuro */
+  --background-dark: #333439; /* Cor de fundo escura */
+  --text-light: #f7f7f7; /* Texto claro */
+  --border-color: #0e1d2f; /* Cor da borda */
+  --background-gradient-light: linear-gradient(
+    230deg,
+    rgba(240, 240, 240, 1) 0%,
+    rgba(200, 200, 200, 1) 100%
+  ); /* Gradiente de fundo claro */
+  --background-gradient-dark: linear-gradient(
+    230deg,
+    rgba(50, 50, 50, 1) 0%,
+    rgba(20, 20, 20, 1) 100%
+  ); /* Gradiente de fundo escuro */
+  --scrollbar-thumb-color: #ecf4ff; /* Cor do polegar da barra de rolagem */
+  --scrollbar-track-color: transparent; /* Cor da trilha da barra de rolagem */
+}
+
+body {
+  background-image: var(
+    --background-gradient-light
+  ); /* Aplicação do gradiente de fundo claro */
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  background: var(--background-light); /* Cor de fundo clara */
+  color: var(--text-dark); /* Texto escuro */
+  margin: 44px 64px 55px; /* Margem superior, esquerda, direita e inferior */
+  border-radius: 20px; /* Borda arredondada */
+  box-shadow: 6px 6px 6px rgba(20, 20, 20, 0.5); /* Sombra */
+  padding: 64px; /* Espaçamento interno */
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+}
+
+.perfil {
+  display: flex;
+  align-items: center;
+}
+
+.perfil-foto {
+  border-radius: 10%; /* Borda arredondada */
+  max-height: 160px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /* Sombra */
+}
+
+.titulo {
+  margin-left: 16px;
+}
+
+.titulo h1,
+.titulo h3 {
+  margin: 0;
+}
+
+.titulo h1 {
+  font-weight: 700;
+  font-size: 36px;
+}
+
+.titulo h3 {
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.icons {
+  position: relative;
+  top: 5px;
+}
+
+.icons a:nth-of-type(2n) {
+  margin: 10px;
+}
+
+.tema button {
+  align-self: flex-end;
+  font-size: 16px;
+  padding: 8px 16px;
+  background: var(--background-light); /* Cor de fundo clara */
+  box-sizing: border-box;
+  border-radius: 100px; /* Borda arredondada */
+  border: 2px solid var(--border-color); /* Borda */
+}
+
+.portfolio {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: auto 15ch;
+  gap: 16px;
+}
+
+.dark {
+  background-image: var(
+    --background-gradient-dark
+  ); /* Aplicação do gradiente de fundo escuro */
+}
+
+.dark .container {
+  background: var(--background-dark); /* Cor de fundo escura */
+  color: var(--text-light); /* Texto claro */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra no texto */
+}
+
+.dark .projetos-item a {
+  color: var(--text-light); /* Texto claro */
+}
+
+.dark .tema button {
+  color: #ffffff;
+  background: #1c1c1c;
+  box-sizing: border-box;
+  border-radius: 100px; /* Borda arredondada */
+  border: 2px solid var(--text-light); /* Borda */
+}
+
+.dark .icons {
+  filter: none;
+}
+
+.hide {
+  display: none;
+}
+
+.item:hover + .hide,
+.hide:hover {
+  display: block;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(
+    --scrollbar-thumb-color
+  ); /* Cor do polegar da barra de rolagem */
+  border: 1.8px solid var(--scrollbar-thumb-color); /* Borda do polegar da barra de rolagem */
+  border-radius: 100px; /* Borda arredondada */
+}
+
+::-webkit-scrollbar-track {
+  background: var(
+    --scrollbar-track-color
+  ); /* Cor da trilha da barra de rolagem */
+  border-radius: 100px; /* Borda arredondada */
+  margin: 15px 0px;
+}
