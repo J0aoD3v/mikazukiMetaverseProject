@@ -126,6 +126,10 @@ body {
   filter: none;
 }
 
+.dark .github-icon img {
+  filter: invert(1); /* Inverte as cores da imagem para branco */
+}
+
 .hide {
   display: none;
 }
@@ -154,4 +158,109 @@ body {
   ); /* Cor da trilha da barra de rolagem */
   border-radius: 100px; /* Borda arredondada */
   margin: 15px 0px;
+}
+
+.caixa {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: auto 60ch;
+  gap: 16px;
+}
+
+.sobre {
+  max-height: 300px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 32px;
+  background: linear-gradient(
+    135deg,
+    rgba(99, 99, 99, 1) 0%,
+    rgba(129, 129, 129, 1) 20%,
+    rgba(159, 159, 159, 1) 50%,
+    rgba(129, 129, 129, 1) 80%,
+    rgba(99, 99, 99, 1) 100%
+  );
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.sobre ul {
+  list-style: none;
+  padding-left: 0;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.news {
+  height: 300px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 8px 32px;
+  background: linear-gradient(
+    135deg,
+    rgba(99, 99, 99, 1) 0%,
+    rgba(129, 129, 129, 1) 20%,
+    rgba(159, 159, 159, 1) 50%,
+    rgba(129, 129, 129, 1) 80%,
+    rgba(99, 99, 99, 1) 100%
+  );
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.news ul {
+  list-style: none;
+  padding-left: 0;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.banner {
+  display: flex;
+  align-items: flex-end;
+  max-height: 100px;
+  margin-top: 16px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  background: black;
+}
+
+.banner img {
+  width: 100px;
+  height: 100px;
+  margin-left: 20px;
+}
+
+.banner a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.banner a span {
+  margin-bottom: 10px;
+  margin-left: 10px;
+  font-size: 48px; /* Ajuste o valor para aumentar o tamanho da fonte */
+  font-family: "Roboto", sans-serif; /* Substitua "Roboto" pela fonte desejada */
+  letter-spacing: 1px; /* Espaçamento entre letras */
+  animation: changeColor 5s infinite; /* Duração da animação e repetição infinita */
+}
+
+@keyframes changeColor {
+  0% {
+    color: #ffffff; /* Cor inicial (preto) */
+  }
+  50% {
+    color: #ff0000; /* Cor intermediária (vermelho) */
+  }
+  100% {
+    color: #ffffff;
+  }
 }
