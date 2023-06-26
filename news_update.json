@@ -1,0 +1,15 @@
+{
+    "updates": [
+        {
+            "hora": "09:00",
+            "dia": "25 de junho de 2023",
+            "conteudo": "Atualização 1"
+        },
+        {
+            "hora": "10:00",
+            "dia": "25 de junho de 2023",
+            "conteudo": "Atualização 2"
+        },
+        ...
+    ]
+}
