@@ -1,9 +1,98 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" >
 <head>
-    <script src="script.js"></script>
+  <meta charset="UTF-8">
+  <title>CodePen - Mikazuki v02</title>
+  <link rel="stylesheet" href="./style.css">
+
 </head>
 <body>
-    <p>Redirecionando automaticamente para <a href="https://mikazukimeta.flutterflow.app">https://mikazukimeta.flutterflow.app</a></p>
+<!-- partial:index.partial.html -->
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+</head>
+
+<body>
+  <div class="container">
+    <header class="cabecalho">
+      <div class="perfil">
+        <img class="perfil-foto" src="https://github.com/J0aoD3v/mikazukiMetaverseProject/blob/main/mikazuki-optimize.gif?raw=true" />
+        <div class="titulo">
+          <h1>Mikazuki Metaverse Project.</h1>
+          <div class="icons">
+            <a href="https://www.facebook.com/mikazukimeta/" target="_blank"><img height="30" src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="facebook"></a>
+            <a href="https://www.instagram.com/mikazukimeta/" target="_blank"><img height="30" src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="instagram"></a>
+            <a href="https://twitter.com/mikazukimeta" target="_blank"><img height="30" src="https://cdn-icons-png.flaticon.com/512/3256/3256013.png" alt="twitter"></a>
+            <a href="https://github.com/J0aoD3v/mikazukiMetaverseProject" target="_blank" class="github-icon">
+              <img height="30" src="https://cdn-icons-png.flaticon.com/512/3291/3291695.png" alt="github">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="tema">
+        <button onclick="mudaTema()">Alterar Tema</button>
+      </div>
+    </header>
+
+    <body>
+      <div class="banner">
+        <img src="https://img.icons8.com/?size=512&id=79102&format=png" alt="Roblox Icon" width="50" height="50">
+        <a href="https://www.roblox.com/games/13662000700/UENP-Virtual" target="_blank">
+          <span>Entre aqui no Metaverso do Roblox</span>
+        </a>
+      </div>
+      <main class="caixa">
+
+        <div class="sobre">
+          <ul>SOBRE 👤</ul>
+          <p>
+            O Mikazuki Metaverse Project é um projeto inovador que visa criar um metaverso para sua universidade. Ele proporcionará aos estudantes, professores e membros da comunidade acadêmica uma experiência virtual única e enriquecedora.
+          </p>
+          <p>O metaverso será um ambiente seguro, onde os estudantes poderão interagir, aprender e colaborar. Assim como o gato Mikazuki é leal e protetor, o metaverso será uma plataforma que orientará e apoiará os estudantes em sua jornada acadêmica.
+          </p>
+          <p>Além disso, ele permitirá a comunicação e conexão entre os participantes, facilitando a troca de conhecimento e experiências. O Mikazuki Metaverse Project também incentiva a exploração e a descoberta, proporcionando aos estudantes a oportunidade de explorar ambientes virtuais, participar de eventos e ampliar suas experiências acadêmicas.
+          </p>
+          <p>Através do site do projeto, os interessados poderão obter informações sobre seus objetivos, recursos e como participar dessa experiência virtual inovadora. Com o Mikazuki Metaverse Project, a universidade está comprometida em oferecer uma plataforma avançada que apoie o aprendizado, a interação e o crescimento da comunidade acadêmica.
+          </p>
+        </div>
+        <div class="news">
+          <ul>NEWS 📰</ul>
+
+          <head>
+            <title>Visualização de Atualizações</title>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+          </head>
+
+          <body>
+            <div id="updates"></div>
+
+            <script>
+              $(document).ready(function() {
+                $.getJSON("https://api.jsonbin.io/v3/b/6498faf78e4aa6225eb465b8", function(data) {
+                  var updates = data.record.updates;
+                  updates.forEach(function(update) {
+                    var hora = update.hora;
+                    var dia = update.dia;
+                    var conteudo = update.conteudo;
+                    var updateElement = $("<div>");
+                    updateElement.html("<strong>Hora:</strong> " + hora + "<br>" +
+                      "<strong>Dia:</strong> " + dia + "<br>" +
+                      "<strong>Conteúdo:</strong> " + conteudo + "<br><br>");
+                    $("#updates").append(updateElement);
+                  });
+                }).fail(function(jqxhr, textStatus, error) {
+                  var errorMessage = textStatus + ", " + error;
+                  $("#updates").html("<strong>Erro ao carregar as atualizações:</strong> " + errorMessage);
+                });
+              });
+            </script>
+          </body>
+        </div>
+      </main>
+  </div>
+</body>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
 </body>
 </html>
