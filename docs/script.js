@@ -1,3 +1,3 @@
-window.onload = function() {
-    window.location.href = "https://mikazukimeta.flutterflow.app";
+function mudaTema() {
+  document.body.classList.toggle("dark");
 }
